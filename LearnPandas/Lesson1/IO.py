@@ -85,3 +85,16 @@ df.to_sql('data.sql')
 #write to pickle file
 df.to_pickle('data.pickle')
 
+#serialize class objects
+#region serialize class objects
+#writing to a file
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __repr__(self):
+        return f'Person({self.name}, {self.age})'
+
+p = Person('John', 30)
+df.to_csv(p)
