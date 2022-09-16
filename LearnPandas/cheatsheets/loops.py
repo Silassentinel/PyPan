@@ -16,8 +16,8 @@ while i < 10:
 # map
 list(map(lambda x: x**2, range(10)))
 
-# filter
-list(filter(lambda x: x % 2 == 0, range(10)))
+# filter with compressions
+[i for i in range(10) if i % 2 == 0]
 
 # enumerate
 for i, x in enumerate(range(10)):
